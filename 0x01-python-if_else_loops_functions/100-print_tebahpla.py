@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for alphabet in range(122, 96):
-    print(alphabet)
+    print("{}".format(chr(alphabet)))
