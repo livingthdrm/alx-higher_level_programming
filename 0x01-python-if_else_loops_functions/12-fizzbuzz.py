@@ -2,7 +2,7 @@
 for number in range(1, 101):
     if number % 3 != 0 and number % 5 != 0:
         print("{}".format(number), end=" ")
-    elif number % 15 == 0;
+    elif number % 15 == 0:
         print("FizzBuzz", end=" ")
     elif number % 3 == 0:
         print("Fizz", end=" ")
