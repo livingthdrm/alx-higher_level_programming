@@ -2,5 +2,5 @@
 from add_0 import add
 a = 1
 b = 2
-result = add(a, b)
-print("{a:d} + {b:d} = {add(a, b)}".format(a, b, result))
+result
+print("{a:D} + {b:D} = {add(a, b)>:D}".format(a, b, (result=add_0.add(a, b))))
