@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" a program that imports functions from the file calculator_1.py,
+""" a program that imports functions from the file
     does some Maths, and prints the result """
 
 if __name__ == "__main__":
