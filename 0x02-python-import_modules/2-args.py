@@ -11,7 +11,7 @@ def prog(*argv):
         print("1 argument:")
         print("1: {}".format(argv[0]))
     else:
-        print("{} argument:".format(len(argv)))
+        print("{} arguments:".format(len(argv)))
         for i, item in enumerate(argv, start=1):
             print("{}: {}".format(i, item))
 
