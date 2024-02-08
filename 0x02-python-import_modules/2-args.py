@@ -15,5 +15,6 @@ def prog(*argv):
         for i, item in enumerate(argv, start=1):
             print("{}: {}".format(i, item))
 
+
 if __name__ == "__main__":
     prog(*sys.argv[1:])
