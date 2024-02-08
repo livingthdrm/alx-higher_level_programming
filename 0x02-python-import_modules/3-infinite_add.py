@@ -7,8 +7,8 @@ import sys
 def mazematics(*argv):
     result = 0
     for i, item in enumerate(argv, start=1):
-        result += int(argv[item])
-        print("{}".format(result))
+        result += int(item)
+    print("{}".format(result))
 
 
 if __name__ == "__main__":
