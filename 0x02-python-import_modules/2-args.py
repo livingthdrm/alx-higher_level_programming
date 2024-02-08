@@ -9,11 +9,11 @@ def prog(*argv):
         print("0 arguments.")
     elif len(argv) == 1:
         print("1 argument:")
-        print("1: {}".format(argv(0)))
+        print("1: {}".format(argv[0]))
     else:
         print("{} argument:".format(len(argv)))
         for i, item in enumerate(argv, start=1):
             print("{}: {}".format(i, item))
 
-    if __name == "__main__":
-        prog(*sys.argv[1:])
+if __name__ == "__main__":
+    prog(*sys.argv[1:])
