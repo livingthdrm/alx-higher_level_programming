@@ -5,4 +5,4 @@ module hidden_4.pyc """
 
 if __name__ == "__main__":
     from hidden_4 import *
-    print("{}".format(dir()))
+    print("{}".format(dir(hidden_4)))
