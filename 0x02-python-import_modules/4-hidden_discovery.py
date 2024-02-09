@@ -7,4 +7,4 @@ if __name__ == "__main__":
     import hidden_4
 
     if (hidden_4.__name__ != "__main__"):
-        print("{}".format(dir(hidden_4)
+        print("{}".format(dir(hidden_4)))
