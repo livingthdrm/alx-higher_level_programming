@@ -11,24 +11,23 @@ def calc(*argv):
     if len(argv) != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         return 1
-    if (argv[1] != chr(43) or argv[1] != chr(45)
-    or argv[1] != chr(42) or argv[1] != chr(47)):
+    operator = argv[1]
+
+    if operator not in {'+', '-', '*', '/'}:
         print("Unknown operator. Available operators: +, -, * and /")
         return 1
-    else:
-        for item in argv:
-            if item[1] == chr(43):
-                result = add(int(item[0]), int(item[2]))
-                print("{} + {} = {}".format(item[0], item[2], result))
-            elif item[1] == chr(45):
-                result = sub(int(item[0]), int(item[2]))
-                print("{} - {} = {}".format(item[0], item[2], result))
-            elif item[1] == (42):
-                result = mul(int(item[0]), int(item[2]))
-                print("{} * {} = {}".format(item[0], item[2], result))
-            elif item[1] == (47):
-                result = div(int(item[0]), int(item[2]))
-                print("{} / {} = {}".format(item[0], item[2], result))
+
+    a, b = map(int, argv[::2])
+    if operator == '+':
+        result = add(a, b)
+    elif operator == '-':
+        result = sub(a, b)
+    elif operator == '*':
+        result = mul(a, b)
+    elif operator == '/':
+        result = div(a, b)
+
+    print("{} {} {} = {}".format(a, operator, b, result))
 
 
 if __name__ == "__main__":
