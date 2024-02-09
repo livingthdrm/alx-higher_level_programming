@@ -11,23 +11,24 @@ def calc(*argv):
     if len(argv) != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         return 1
-    if argv[1] != '+' or argv[1] != '-' or argv[1] != '*' or argv[1] != '/':
+    if (argv[1] != chr(43) or argv[1] != chr(45)
+    or argv[1] != chr(42) or argv[1] != chr(47)):
         print("Unknown operator. Available operators: +, -, * and /")
         return 1
     else:
         for item in enumerate(argv, start=1):
-            if item[2] == '+':
-                result = add(int(item[1]), int(item[3]))
-                print("{} + {} = {}".format(item[1], item[3], result))
-            elif item[2] == '-':
-                result = sub(int(item[1]), int(item[3]))
-                print("{} - {} = {}".format(item[1], item[3], result))
-            elif item[2] == '*':
-                result = mul(int(item[1]), int(item[3]))
-                print("{} * {} = {}".format(item[1], item[3], result))
-            elif item[2] == '/':
-                result = div(int(item[1]), int(item[3]))
-                print("{} / {} = {}".format(item[1], item[3], result))
+            if item[1] == chr(43):
+                result = add(int(item[0]), int(item[2]))
+                print("{} + {} = {}".format(item[0], item[2], result))
+            elif item[1] == chr(45):
+                result = sub(int(item[0]), int(item[2]))
+                print("{} - {} = {}".format(item[0], item[2], result))
+            elif item[1] == (42):
+                result = mul(int(item[0]), int(item[2]))
+                print("{} * {} = {}".format(item[0], item[2], result))
+            elif item[1] == (47):
+                result = div(int(item[0]), int(item[2]))
+                print("{} / {} = {}".format(item[0], item[2], result))
 
 
 if __name__ == "__main__":
