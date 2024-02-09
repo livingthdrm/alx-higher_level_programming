@@ -4,7 +4,7 @@
 module hidden_4.pyc """
 
 if __name__ == "__main__":
-    import hidden_4
+    from hidden_4 import *
 
     if hidden_4.__name__ == "hidden_4":
         print("{}".format(dir(hidden_4)))
