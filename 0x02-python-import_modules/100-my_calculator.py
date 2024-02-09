@@ -16,7 +16,7 @@ def calc(*argv):
         print("Unknown operator. Available operators: +, -, * and /")
         return 1
     else:
-        for item in enumerate(argv, start=1):
+        for item in argv:
             if item[1] == chr(43):
                 result = add(int(item[0]), int(item[2]))
                 print("{} + {} = {}".format(item[0], item[2], result))
