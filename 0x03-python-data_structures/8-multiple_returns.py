@@ -7,4 +7,5 @@ def multiple_returns(sentence):
     for item in sentence:
         if (len(sentence) < 1):
             return (len(sentence), None)
-        return (len(sentence), sentence[0],)
+        else:
+            return (len(sentence), sentence[0],)
