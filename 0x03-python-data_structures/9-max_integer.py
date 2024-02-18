@@ -7,5 +7,8 @@ def max_integer(my_list=[]):
         return None
     else:
         for index, item in enumerate(my_list):
-            if (my_list[index]) > (my_list[index + 1]):
+            if index == len(my_list) - 1:
+                break
+            if item  > (my_list[index + 1]):
                 return item
+        return my_list[-1]
