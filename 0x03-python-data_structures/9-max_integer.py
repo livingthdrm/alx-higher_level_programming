@@ -9,6 +9,6 @@ def max_integer(my_list=[]):
         for index, item in enumerate(my_list):
             if index == len(my_list) - 1:
                 break
-            if item  > (my_list[index + 1]):
+            if item > (my_list[index + 1]):
                 return item
         return my_list[-1]
