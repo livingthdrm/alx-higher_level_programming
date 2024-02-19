@@ -3,10 +3,15 @@
 
 
 def best_score(a_dictionary):
+    if (a_dictionary) == None:
+        return None
+
+    max_key = None
+    max_value = float('-inf')  # Set initial max_value to negative infinity
+
     for key, value in a_dictionary.items():
-        if len(list(a_dictionary)) == 0:
-            return None
-        else:
-            while len(list(a_dictionary)):
-                if value > value + 1:
-                    return a_dictionary[key]
+        if value > max_value:
+            max_value = value
+            max_key = key
+
+    return max_key
