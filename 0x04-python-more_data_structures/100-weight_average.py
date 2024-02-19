@@ -5,9 +5,10 @@ average of all integers tuple (<score>, <weight>) """
 
 def weight_average(my_list=[]):
     new_dict = dict(my_list)
-
     first, second = 0, 0
 
+    if len(list(new_dict)) == 0:
+        return 0
     for score, weight in new_dict.items():
         first += (score * weight)
         second += weight
