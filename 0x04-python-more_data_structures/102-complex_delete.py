@@ -9,4 +9,4 @@ def complex_delete(a_dictionary, value):
         else:
             if value == valued:
                 del a_dictionary[key]
-        return a_dictionary
+                return complex_delete(a_dictionary, value)
