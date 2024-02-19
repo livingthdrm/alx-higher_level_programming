@@ -3,11 +3,11 @@
 
 
 def square_matrix_simple(matrix=[]):
-    #new_mat = ((lambda x: x**2) for row in matrix for x in row)
-    #return new_mat
     new_mat = []
     for row in matrix:
-        for i in row:
-            result = i**2
-        new_mat.append(result)
+        new_row = []
+        for item in row:
+            result = item**2
+            new_row.append(result)
+        new_mat.append(new_row)
     return new_mat
