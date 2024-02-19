@@ -10,4 +10,3 @@ def best_score(a_dictionary):
             while len(list(a_dictionary)):
                 if value > value + 1:
                     return a_dictionary[key]
-
