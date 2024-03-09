@@ -5,8 +5,9 @@
 def safe_print_list(my_list=[], x=0):
     try:
         for i, item in enumerate(my_list):
-            if i <= x:
-                print(item)
-                return i
+            if i < x:
+                print(item, end='')
+        print()
+        return i + 1 
     except IndexError:
         return 1
