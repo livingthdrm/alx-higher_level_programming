@@ -15,12 +15,12 @@ class Square:
         """ A method to initialize square
             here we also try handle type error and value error
             exceptions. """
-        try:
             self.__size = size
-
-            if type(self.__size) != int:
-                except TypeError:
-                    print("size must be an integer")
-            elif self.__size < 0:
-                except ValueError:
-                    print("size must be >= 0")
+            
+            try:
+                if type(self.__size) != int:
+                    except TypeError:
+                        print("size must be an integer")
+                elif self.__size < 0:
+                    except ValueError:
+                        print("size must be >= 0")
