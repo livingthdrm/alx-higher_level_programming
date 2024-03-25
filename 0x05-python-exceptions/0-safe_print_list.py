@@ -6,10 +6,8 @@ def safe_print_list(my_list=[], x=0):
     try:
         my_list = my_list[:x]
         for i, item in enumerate(my_list):
-            if i < x:
-                print(item, end=" ")
+            print(item, end="")
         print()
         return i + 1
     except IndexError:
         print("Index out of range")
-        return i + 1
