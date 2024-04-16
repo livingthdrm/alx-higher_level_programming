@@ -13,6 +13,6 @@ WHERE tv_shows.id NOT IN (
 	FROM tv_show_genres
 	INNER JOIN tv_genres
 	ON tv_show_genres.genre_id = tv_genres.id
-	WHERE tv_genre.name = 'Comedy'
+	WHERE tv_genres.name = 'Comedy'
 )
 ORDER BY tv_show.title ASC;
