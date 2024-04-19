@@ -9,6 +9,7 @@ class Square:
 
     __size = 0
 
+    """ The initialization method """
     def __init__(self, size=0):
         """ Instantiation with optional size: def __init__(self, size=0):
             size must be an integer, otherwise raise a TypeError exception
