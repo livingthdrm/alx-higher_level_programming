@@ -9,8 +9,7 @@ class Square:
     Attributes:
         size of the square"""
     def __init__(self, size=0):
-        """ Instantiation with optional size: def __init__(self, size=0):
-            size must be an integer, otherwise raise a TypeError exception
+        """size must be an integer, otherwise raise a TypeError exception
             with the message size must be an integer
 
             Args:
@@ -23,3 +22,6 @@ class Square:
             raise ValueError("size must be >= 0")
 
         self.__size = size
+
+    def __main__(self):
+        pass
