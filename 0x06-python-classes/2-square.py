@@ -1,32 +1,29 @@
 #!/usr/bin/python3
-""" an class
-Square that defines a square """
+""" a class Square that defines a square by: (based on 1-square.py) """
 
 
 class Square:
-    """ a class Square that defines a square by: (based on 0-square.py)
-
-    Private instance attribute: size
-    Instantiation with size (no type/value verification) """
+    """ Private instance attribute: size
+    You are not allowed to import any module"""
 
     __size = 0
 
     def __init__(self, size=0):
-        """ A method to initialize square
-            here we also try handle type error and value error
-            exceptions. """
-        self.__size = size
-        try:
-            """ checking for exception """
-            if type(self.__size) != int:
-                """ check for type error exceptions """
-                raise TypeError
-            elif self.__size < 0:
-                """ check for value error exceptions"""
-                raise ValueError
+        """ Instantiation with optional size: def __init__(self, size=0): 
+            size must be an integer, otherwise raise a TypeError exception
+            with the message size must be an integer
 
+
+            if size is less than 0, raise a ValueError exception
+            with the message size must be >= 0"""
+        
+        try:
+            if type(size) != int:
+                raise TypeError
+            if size < 0:
+                raise ValueError
+            self.__size = size
         except TypeError:
             print("size must be an integer")
-
         except ValueError:
             print("size must be >= 0")
