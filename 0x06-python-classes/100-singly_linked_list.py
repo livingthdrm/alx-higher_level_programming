@@ -7,7 +7,7 @@ class Node:
         attributes:
         data - private instance """
         self.__data = data
-        self.__next_node = next_node
+        self.__next_node = None
 
     @property
     def data(self):
