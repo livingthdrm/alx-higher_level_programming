@@ -69,4 +69,3 @@ class Square:
             print(" " * self.__position[0], end='')
 
             print("#" * self.__size)
-
