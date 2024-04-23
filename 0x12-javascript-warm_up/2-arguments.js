@@ -2,7 +2,8 @@
 /* a script that prints a message depending of the 
  * numbe rod arguments passed */
 
-const { argv } = require('node:process');
+const process = require('process');
+
 if process.argv.length == 2 {
 	console.log('No argument');
 }
