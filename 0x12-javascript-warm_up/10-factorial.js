@@ -10,9 +10,9 @@ function factorial (a) {
 }
 
 if (process.argv.length !== 3) {
-  console.log('NaN');
+  console.log('1');
 } else if (parseInt(process.argv[2], 10)) {
   console.log(factorial(process.argv[2]));
 } else {
-  console.log('NaN');
+  console.log('1');
 }
