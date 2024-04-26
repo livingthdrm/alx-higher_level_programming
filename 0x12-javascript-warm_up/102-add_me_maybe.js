@@ -3,5 +3,5 @@
 
 exports.addMeMaybe = (number, theFunction) => {
   number++;
-  console.log(number);
+  console.log('New Value: ' + number);
 };
