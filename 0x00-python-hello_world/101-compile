@@ -1,20 +1,30 @@
 #!/bin/bash
 
-# Check if the PYFILE environment variable is set
-if [[ -z "$PYFILE" ]]; then
-  echo "Error: Environment variable PYFILE is not set. Please provide the filename to compile."
+# Check if PYFILE environment variable is set
+if [ -z "$PYFILE" ]; then
+  echo "Error: PYFILE environment variable is not set."
   exit 1
 fi
 
-# Extract the base filename without extension
-PYFILE_BASE="${PYFILE%.*}"
+# Check if the specified Python file exists
+if [ ! -f "$PYFILE" ]; then
+  echo "Error: Python file '$PYFILE' not found."
+  exit 1
+fi
 
-# Compile the Python file using the py_compile module
+# Compile the Python file
 python -m py_compile "$PYFILE"
 
 # Check if compilation was successful
-if [[ $? -eq 0 ]]; then
-  echo "Compilation successful. Output file: ${PYFILE_BASE}c"
+if [ $? -eq 0 ]; then
+  echo "Compilation successful."
 else
-  echo "Compilation failed. Please check the source file."
+  echo "Error: Compilation failed."
+  exit 1
 fi
+
+# Rename the compiled file
+compiled_file="${PYFILE}c"
+mv "${PYFILE}__pycache__/${PYFILE%.py}.pyc" "$compiled_file"
+
+echo "Compiled file: $compiled_file"

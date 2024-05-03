@@ -7,7 +7,7 @@ class Node:
         attributes:
         data - private instance """
         self.__data = data
-        self.__next_node = None
+        self.__next_node = next_node
 
     @property
     def data(self):
@@ -46,25 +46,26 @@ class SinglyLinkedList:
     def __iter__(self):
         """ making the node iterable """
 
-        node = self.__head
-        while node:
-            yield node.__data
-            node = node.next_node
+        current = self.__head
+        while current:
+            yield current.data
+            current = current.next_node
 
     def __repr__(self):
         """ iterate to get all the data """
         return " ".join(map(repr, self))
 
     def sorted_insert(self, value):
-        """ A method to insert a new node """
+        """ A method to insert a new node with the given value sorted  """
         new_node = Node(value)
-        prev = None
-        node = self.__head
-        while node and node.__data < value:
-            prev = node
-            node = node.__next_node
-            if prev:
-                prev.next_node = new_node
-            else:
-                self.__head = new_node
-            new_node.next_node = node
+        # inserting a new node at the head
+        if self.__head is None or self.__head.data > value:
+            new_node.next_node = self.__head
+            self.__head = new_node
+        else:
+            #inserting in the middle or the end
+            current = self.__head
+            while current.next_node is not None and current.next_node.data < value:
+                current = current.next_node
+            new_node.next_node = current.next_node
+            current.next_node = new_node
