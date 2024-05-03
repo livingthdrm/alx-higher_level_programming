@@ -10,10 +10,13 @@ def add_integer(a, b=98):
     """ a and b must be integers or floats, otherwise raise a TypeError
     exception with the message a must be an integer or b must be an integer
     a and b must be first casted to integers if they are float """
-    if not isinstance(a, (int, float)):
+    if isinstance(a, float):
+        a = int(a)
+    if isinstance(b, float):
+        b = int(b)
+    if not isinstance(a, int):
         raise TypeError('a must be an integer')
-    elif not isinstance(b, (int, float)):
+    elif not isinstance(b, int):
         raise TypeError('b must be an integer')
-    result = int(a) + int(b)
 
-    return result
+    return (a + b)
