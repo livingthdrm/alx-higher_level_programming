@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """ a function that divides all elements of a matrix.
 
-    Prototype: 
-        def matrix_divided(matrix, div)
+    Prototype:
+     def matrix_divided(matrix, div)
 """
 
 
 def matrix_divided(matrix, div):
     """ a function that divides all elements of a matrix.
-    All elements of the matrix should be divided by div, rounded to 2 decimal places
+    All elements of the matrix should be divided by div, rounded to 2 decimals
     Returns a new matrix """
 
     msg = "matrix must be a matrix (list of lists) of integers/floats"
